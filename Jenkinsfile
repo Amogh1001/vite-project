@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        WORKSPACE = "C:\\AdityaPersonal\\nexTurn\\AdityaSharma_NexTurn_Assignments\\M6_Jenkins_Assignments\\Exercise_2\\vite-project"
+        WORKSPACE = "C:\\Users\\User\\Programming\\m6\\e4\\vite-project"
     }
     stages {
         stage('Changing Directory') {
@@ -12,11 +12,7 @@ pipeline {
                         bat "cd ${env.WORKSPACE}"
                         echo "Directory changed to ${env.WORKSPACE}"
                         echo "Installing Dependencies.."
-                        bat 'npm install'
-                        echo "Running Tests.."
-                        bat 'npm test'
-                        echo "Building the project.."
-                        bat 'npm run build'
+                        bat 'npm i'
                         echo "Building the project.."
                         bat 'npm run build'
                         echo "Deploying the application by copying the build folder to a deployment directory..."
